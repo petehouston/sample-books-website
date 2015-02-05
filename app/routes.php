@@ -15,3 +15,14 @@ Route::get('/', [
 	'as' => 'home',
 	'uses' => 'PagesController@home'
 ]);
+
+Route::get('/admin', [
+	'before' => 'auth',
+	'as' => 'admin.home',
+	'uses' => 'AdminPagesController@home'
+]);
+
+Route::get('/admin/login', [
+	'as' => 'admin.auth.login',
+	'uses' => 'AdminAuthController@login'
+]);

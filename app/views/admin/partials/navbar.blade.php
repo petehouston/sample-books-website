@@ -9,14 +9,14 @@
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="nav navbar-nav">
-            <li><a href="#">List</a>
+            <li><a href="#">Add New Book</a>
             </li>
             <li><a href="#">Search</a>
             </li>
             
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ URL::route('admin.home') }}">Admin</a>
+            <li><a href="#">Admin</a>
             </li>
         </ul>
     </div>
