@@ -10,9 +10,19 @@
 	<div class="row">
 		<div class="col-md-offset-3 col-md-6">
 			
-			<form class="form-horizontal">
+			{{  Form::open([
+					'route' => [ 'admin.auth.login.post' ],
+					'method' => 'POST'
+				])
+			}}
 			  <fieldset>
 			    <legend>Admin Login</legend>
+				
+				@if (Session::has('error'))
+				<div class="form-group">
+					<div class="alert alert-danger">{{ Session::get('error') }}</div>
+				</div>
+				@endif
 
 			    <div class="form-group">
 					<label for="username" class="col-lg-2 control-label">Username</label>
@@ -31,7 +41,7 @@
 				<button type="submit" class="btn btn-success">Login</button>
 			    
 			  </fieldset>
-			</form>
+			{{ Form::close() }}
 
 		</div>
 	</div>
